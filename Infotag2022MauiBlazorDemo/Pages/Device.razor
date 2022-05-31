@@ -5,10 +5,10 @@
 
 
 <button class="btn btn-primary" @onclick="PlattformDeviceButtonClicked">Gerätenamen anzeigen (Plattform-Ordner)</button>
-<p role="status">Current count: @folderDeviceLabel</p>
+<p role="status">Name des Geräts: @folderDeviceLabel</p>
 
 <button class="btn btn-primary" @onclick="FileDeviceButtonClicked">Gerätenamen anzeigen (Datei-Konvention)</button>
-<p role="status">Current count: @fileDeviceLabel</p>
+<p role="status">Name des Geräts: @fileDeviceLabel</p>
 
 @code {
     private string folderDeviceLabel = "";
