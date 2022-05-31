@@ -1,0 +1,28 @@
+﻿@page "/device"
+
+<h1>Device Demo</h1>
+
+
+
+<button class="btn btn-primary" @onclick="PlattformDeviceButtonClicked">Gerätenamen anzeigen (Plattform-Ordner)</button>
+<p role="status">Current count: @folderDeviceLabel</p>
+
+<button class="btn btn-primary" @onclick="FileDeviceButtonClicked">Gerätenamen anzeigen (Datei-Konvention)</button>
+<p role="status">Current count: @fileDeviceLabel</p>
+
+@code {
+    private string folderDeviceLabel = "";
+    private string fileDeviceLabel = "";
+
+    private void PlattformDeviceButtonClicked()
+    {
+        var service = new DeviceService();
+        folderDeviceLabel = service.GetDeviceName();
+    }
+
+    private void FileDeviceButtonClicked()
+    {
+        var service = new Services.Device.DeviceService();
+        fileDeviceLabel = service.GetDeviceName();
+    }
+}
